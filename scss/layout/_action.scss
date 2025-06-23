@@ -1,0 +1,12 @@
+.action{
+    background-color: #005d13;
+
+    .action-text{
+        color: white;
+    }
+
+    button{
+        background-color: white;
+        @include button-shadow-hover();
+    }
+}

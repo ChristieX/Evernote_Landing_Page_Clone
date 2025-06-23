@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <title>Evernote</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- custom -->
+  <link href="css/main.css" rel="stylesheet" />
+  <script src="script.js"></script>
+</head>
+
+<body class="bg-light-custom">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg py-3 px-5 sticky-top bg-light-custom">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/Logo.png" alt="Evernote Logo" height="32" class="me-2" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navMenu">
+        <ul
+          class="navbar-nav me-auto d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-lg-between gap-lg-5">
+          <li class="nav-item"><a class="nav-link" href="#">Why Evernote</a></li>
+
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Explore</a>
+            <div class="dropdown-menu mega-dropdown bg-light-custom mt-0 ms-5 p-3">
+              <div class="row ">
+                <div class="col-lg-4">
+                  <small class="text-muted">SOLUTIONS</small>
+                  <ul class="list-unstyled dropdown-links">
+                    <li class="py-1"><a href="#">Note Taking</a></li>
+                    <li class="py-1"><a href="#">Self organizing</a></li>
+                    <li class="py-1"><a href="#">Productivity</a></li>
+                    <li class="py-1"><a href="#">Teams</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <small class="text-muted">FEATURES</small>
+                  <ul class="list-unstyled dropdown-links">
+                    <li class="py-1"><a href="#">AI features</a></li>
+                    <li class="py-1"><a href="#">Collaboration</a></li>
+                    <li class="py-1"><a href="#">Web Clipper</a></li>
+                    <li class="py-1"><a href="#">Advanced search</a></li>
+                    <li class="py-1"><a href="#">Document scanning</a></li>
+                    <li class="py-1"><a href="#">Personalization</a></li>
+                    <li class="py-1"><a href="#">Tasks</a></li>
+                    <li class="py-1"><a href="#">Calendar</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <small class="text-muted">ECOSYSTEM</small>
+                  <ul class="list-unstyled dropdown-links">
+                    <li class="py-1"><a href="#">AI Transcribe</a></li>
+                    <li class="py-1"><a href="#">PDF Editor</a></li>
+                    <li class="py-1"><a href="#">PDF Converter</a></li>
+                    <li class="py-1"><a href="#">AI Rewrite</a></li>
+                    <li class="py-1"><a href="#">AI Text To Speech</a></li>
+                    <li class="py-1"><a href="#">AI Meeting Note Taker</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#">Plans</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
+        </ul>
+
+        <div
+          class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-2 gap-lg-3 mt-3 mt-lg-0 text-center">
+          <a href="#" class="text-decoration-none">Log in</a>
+          <a class="button  btn-white btn-large text-decoration-none" href="#">Download</a>
+          <a class="button  btn-green btn-large text-decoration-none" href="#">Start for free</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero section -->
+  <section class="hero min-vh-100 d-flex align-items-center ">
+    <div class="container d-flex flex-column justify-content-between align-items-center text-center w-lg-50 p-5">
+      <h1>What will you <br> <span class="highlight">achieve</span> today?</h1>
+      <p class="p-3">Remember everything and tackle any project with your notes, tasks, and schedule all in one place.
+      </p>
+      <button class="button btn-green btn-big m-3">Get Evernote free</button>
+      <div class="mt-3">
+        <a href="#" class="text-dark">Already have an account? Log in</a>
+      </div>
+    </div>
+  </section>
+  <!-- cards -->
+  <section class="cards my-4">
+    <div class="container scroll-container-wrapper">
+      <div class="scroll-button left bg-light-custom">&#8249;</div>
+      <div class="scroll-button right bg-light-custom">&#8250;</div>
+      <div id="scrollContainer" class="scroll-container p-2">
+        <div class="card scroll-card">
+          <img class="card-img" src="images/cards/wiki.webp" />
+        </div>
+        <div class="card scroll-card">
+          <img class="card-img" src="images/cards/planner.webp" />
+        </div>
+        <div class="card scroll-card">
+          <img class="card-img" src="images/cards/docs.webp" />
+        </div>
+        <div class="card scroll-card">
+          <img class="card-img" src="images/cards/class-notes.webp" />
+        </div>
+        <div class="card scroll-card">
+          <img class="card-img" src="images/cards/research.webp" />
+        </div>
+        <div class="card scroll-card">
+          <img class="card-img" src="images/cards/journal.webp" />
+        </div>
+        <div class="card scroll-card">
+          <img class="card-img" src="images/cards/thoughts.webp" />
+        </div>
+        <div class="card scroll-card">
+          <img class="card-img" src="images/cards/task-list.webp" />
+        </div>
+        <div class="card scroll-card">
+          <img class="card-img" src="images/cards/meeting-notes.webp" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- features -->
+  <section class="features">
+    <div class="container p-4 text-center text-lg-start">
+      <div class="row gap-3 gap-lg-0">
+        <div class="col-12 col-lg-3 feature-container">
+          <div class="img-container">
+            <img src="images/features/location.webp" alt="Location image">
+          </div>
+          <div class="info">
+            <h4>Work Anywhere</h4>
+            <p>
+              Keep important info handy—your notes sync automatically to all your devices.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 feature-container">
+          <div class="img-container">
+            <img src="images/features/pin.webp" alt="Tick mark icon">
+          </div>
+          <div class="info">
+            <h4>Remember everything</h4>
+            <p>
+              Make notes more useful by adding text, images, audio, scans, PDFs, and documents.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 feature-container">
+          <div class="img-container">
+            <img src="images/features/check.webp" alt="Magnifying glass">
+          </div>
+          <div class="info">
+            <h4>Turn to-do into done</h4>
+            <p>
+              Bring your notes, tasks, and schedules together to get things done more easily.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 feature-container">
+          <div class="img-container">
+            <img src="images/features/search.webp" alt="Location pin image">
+          </div>
+          <div class="info">
+            <h4>Find things fast</h4>
+            <p>
+              Get what you need, when you need it with powerful and flexible search capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- reviews -->
+  <!-- <section class="reviews d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container w-75 border border-5">
+      <div class="review-text text-center">
+        <h3 class="p-5">Evernote is a powerful tool that can help executives, entrepreneurs and creative people capture and arrange their ideas. All you have to do is use it.
+          Forbes</h3>
+        <p class="pb-3">Forbes</p>
+      </div>
+      <div class="review-list d-flex align-items-center justify-content-center">
+      </div>
+    </div>
+  </section> -->
+  <section class="reviews min-vh-100">
+    <div class="container ">
+      <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-inner ">
+          <div class="carousel-item active">
+            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+              <h3 class="p-5 text-center">Evernote is a powerful tool that can help executives, entrepreneurs and
+                creative people
+                capture and arrange their ideas. All you have to do is use it.</h3>
+              <p>Forbes</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+              <h3 class="p-5 text-center">Evernote is a powerful tool for managing your tasks right alongside all of the
+                information
+                you work with every day.</h3>
+              <p>Inc. Magazine</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+              <h3 class="p-5 text-center">It feels like there are endless ways to use Evernote… Use it for school, work,
+                life, and
+                beyond.</h3>
+              <p>The Verge</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+              <h3 class="p-5 text-center">A few years ago, after my computer broke down and I lost all of the notes I
+                had saved to
+                my desktop, I finally decided to embrace the cloud and download Evernote. Since then, I haven’t looked
+                back.</h3>
+              <p>Entrepreneur Magazine</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+              <h3 class="p-5 text-center">You can even send emails to Evernote and gather all of the things you need in
+                a single
+                place.</h3>
+              <p>Business.com</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+              <h3 class="p-5 text-center">Consider Evernote to be your go-to hub for not just to-do lists but all of
+                your notes. The
+                organizational possibilities are expansive, and everything syncs across all of your devices that have
+                the app enabled, so you’ll never miss a beat.</h3>
+              <p>well + good</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="casourel-buttons container d-flex align-items-center justify-content-center flex-wrap gap-lg-3">
+          <img src="./images/reviews/forbes.webp" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            class="lighten-image active" aria-current="true" aria-label="Slide 1">
+          <img src="./images/reviews/inc.webp" class="lighten-image" alt="Inc logo"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
+          <img src="./images/reviews/the-verge.webp" class="lighten-image" alt="The Verge logo"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
+          <img src="./images/reviews/entrepreneur-magazine.webp" class="lighten-image" alt="Entrepreneur Magazine logo"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4">
+          <img src="./images/reviews/business-com.webp" class="lighten-image" alt="Business.com logo"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5">
+          <img src="./images/reviews/well-good.webp" class="lighten-image" alt="Well + Good logo"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6">
+        </div>
+
+      </div>
+  </section>
+  <!-- new section -->
+  <section class="new border border-1 border-dark">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-lg-5 bg-white d-flex align-items-center justify-content-center">
+          <div class="container text-content d-flex flex-column justify-content-between align-items-start m-5">
+            <h6 class="pb-5 fw-bold">What's new</h6>
+            <h2>We released 100 Evernote improvements in 2024 🎉</h2>
+            <p>This year, the Evernote team set an ambitious goal to ship one-hundred improvements. As 2024 comes to a
+              close, we counted them up and… we were right on target! Product lead Federico Simionato summarizes the
+              team’s accomplishments and previews what’s in store for 2025.</p>
+            <a href="#" class="pt-5 text-dark">Read more</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7 bg-white ">
+          <img src="images/new.png" class="new-image" alt="abstract image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- benefits -->
+  <section class="benefits ">
+    <!-- row 1 -->
+    <div class="row min-vh-100 mt-5 m-lg-0">
+      <div
+        class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-end align-items-center order-2 order-lg-1">
+        <div class="w-75 d-flex justify-content-between flex-column p-3">
+          <h2>Your information, <br>
+            your way</h2>
+          <p>Use Evernote to capture more than just words. Harness the power of the internet with Web Clipper. Scan and
+            store your important files, documents, and images. Remind yourself how awesome you are with audio notes. No
+            matter if it’s meeting notes, receipts, manuals, or family recipes, Evernote keeps them secure.</p>
+        </div>
+      </div>
+      <div
+        class="col-12 col-lg-7 d-flex justify-content-center justify-content-lg-start align-items-center order-1 order-lg-2">
+        <div class="w-75 d-flex justify-content-center flex-column ps-lg-5">
+          <img src="./images/grid/sketches.webp" alt="" class="object-fit-cover">
+        </div>
+      </div>
+    </div>
+    <!-- row 2 -->
+    <div class="row min-vh-100 ">
+      <div class="col-12 col-lg-7 d-flex justify-content-center justify-content-lg-end align-items-center">
+        <div class="w-75 d-flex justify-content-center flex-column ps-lg-5">
+          <img src="./images/grid/no-signal.webp" alt="" class="object-fit-cover">
+        </div>
+      </div>
+      <div class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-start align-items-center ">
+        <div class="w-75 d-flex justify-content-between align-items-start flex-column p-3">
+          <h2>24/7 access</h2>
+          <p>Evernote automatically syncs across all your devices so you can access your most important information
+            anytime, anywhere. No WiFi? No problem—offline mode means you can continue to use Evernote even when the
+            internet cuts out.</p>
+          <button type="button" class="button  btn-green my-3 px-5 py-2">Get Evernote free</button>
+        </div>
+      </div>
+    </div>
+    <!-- row 3 -->
+    <div class="row min-vh-100 mt-5 m-lg-0">
+      <div
+        class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-end align-items-center order-2 order-lg-1">
+        <div class="w-75 d-flex justify-content-between flex-column p-3">
+          <h2>Instant recall</h2>
+          <p>Intuitive Evernote search features like AI-Powered Search help you get the right information from your
+            notes quickly and reliably. And our advanced search options aren’t limited to notes: with Evernote, you can
+            search your PDFs, documents, and images with ease.</p>
+          <a href="#" class="text-dark">Learn more</a>
+        </div>
+      </div>
+      <div
+        class="col-12 col-lg-7 d-flex justify-content-center justify-content-lg-start align-items-center order-1 order-lg-2">
+        <div class="w-75 d-flex justify-content-center flex-column ps-lg-5">
+          <img src="./images/grid/easy-search.webp" alt="" class="object-fit-cover">
+        </div>
+      </div>
+    </div>
+    <!-- row 4 -->
+    <div class="row min-vh-100 mt-5 m-lg-0">
+      <div class="col-12 col-lg-7 d-flex justify-content-center justify-content-lg-end align-items-center">
+        <div class="w-75 d-flex justify-content-center flex-column ps-lg-5">
+          <img src="./images/grid/teamwork.webp" alt="" class="object-fit-cover">
+        </div>
+      </div>
+      <div class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-start align-items-center ">
+        <div class="w-75 d-flex justify-content-between flex-column p-3">
+          <h2>Effortless collaboration</h2>
+          <p>Evernote makes it easy to collaborate on projects. Real-Time Editing immediately syncs changes to keep all
+            contributors up to date. The Tasks feature helps you outline the next steps and assign responsibilities. And
+            with unlimited sharing permissions, everyone is the loop and on the same page.</p>
+          <a href="#" class="text-dark">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <!-- row 5 -->
+    <div class="row min-vh-100 mt-5 m-lg-0">
+      <div
+        class="col-12 col-lg d-flex justify-content-center justify-content-lg-end align-items-center order-2 order-lg-1">
+        <div class="w-75 d-flex justify-content-between flex-column p-3">
+          <h2>Smarter notes with AI Transcribe</h2>
+          <p>Turn spoken words into organized, searchable notes in seconds. Evernote’s AI Transcribe feature
+            automatically converts your audio into accurate text—perfect for meetings, lectures, or quick thoughts on
+            the go. Save time, stay focused, and never miss a detail.</p>
+          <a href="#" class="text-dark">Take me there</a>
+        </div>
+      </div>
+      <div
+        class="col-12 col-lg-7 d-flex justify-content-center justify-content-lg-start align-items-center order-1 order-lg-2">
+        <div class="w-75 d-flex justify-content-center flex-column ps-lg-5">
+          <img src="./images/grid/ai-features.webp" alt="" class="object-fit-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Use case -->
+  <section class="use-case min-vh-100 d-flex flex-column align-items-center justify-content-center">
+    <div class="container w-lg-50 p-5 p-lg-0 text-center">
+      <h2>Evernote in action</h2>
+      <p>With Evernote, you have everything you need to keep life organized. Use it for note taking, project planning,
+        and to find what you need, when you need it.</p>
+    </div>
+    <div class="container">
+      <div class="row m-5 mx-3">
+        <div class="col-12 col-lg-4 m-auto">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                  data-image="images/action/capture.webp">
+                  Capture everything
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Jot down your thoughts and inspiration anywhere, at any time, in any format,
+                  and on any device. Your important notes, images, receipts, and documents are safe and right at your
+                  fingertips.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                  data-image="images/action/organize.webp">
+                  Stay organized
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Stay on top of it all by creating to-dos in your notes and managing them
+                  your way. Add due dates and reminders so you never miss a deadline. Assign tasks to colleagues and
+                  track their progress.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"
+                  data-image="images/action/document.webp">
+                  Document everything
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Keep your important papers with you, whenever and wherever you need them.
+                  Store healthcare and insurance files, ID cards, warranty and product information, and more—even
+                  handwritten notes.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour"
+                  data-image="images/action/workflows.webp">
+                  Streamline workflows
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Evernote works with the tools you already use to help you be more productive
+                  with less effort. Connect Evernote directly to Google Calendar, Slack, and Microsoft Teams.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 d-none d-lg-block">
+          <div class="container">
+
+            <img id="accordion-display-image" src="images/action/capture.webp" alt="Accordion Display"
+              class="object-fit-cover w-100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- call to action -->
+  <section class="action min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="action-text container w-50 d-flex flex-column justify-content-between align-items-center text-center">
+      <h1>Tame your work, organize your life</h1>
+      <p class="p-3">Remember everything and tackle any project with your notes, tasks, and schedule all in one place.
+      </p>
+      <button class="button  btn-large p-3 px-5">Get Evernote free</button>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="d-flex justify-content-center align-items-center">
+    <div class="container m-4">
+      <div class="row p-5">
+        <div class="col col-12 col-md-2 d-flex align-items-center">
+          <img src="images/Logo.png" alt="Evernote Logo" height="32" />
+        </div>
+        <div class="col col-12 col-md-2 m-4">
+          <div class="btn-group dropup">
+            <button type="button" class="border-0 bg-light-custom dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              English
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Italiano</a></li>
+              <li><a class="dropdown-item" href="#">한국어</a></li>
+              <li><a class="dropdown-item" href="#">日本語</a></li>
+              <li><a class="dropdown-item" href="#">Deutsch</a></li>
+              <li><a class="dropdown-item" href="#">Português</a></li>
+              <li><a class="dropdown-item" href="#">Español</a></li>
+              <li><a class="dropdown-item" href="#">Français</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col col-12 col-lg-4 m-4"></div>
+        <div class="col col-md-3 d-flex align-items-center justify-content-between ps-5">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-medium-m"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+      <div class="row p-5 pt-0">
+        <div class="col-12 col-md-2 m-4">
+          <strong>SOLUTIONS</strong>
+          <ul class="list-unstyled ps-2">
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Note taking</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Self organization</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Productivity</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Teams</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Students</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Compare plans</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-2 m-4">
+          <strong>EXPLORE</strong>
+          <ul class="list-unstyled ps-2">
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">AI features</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Collaboration</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Web clipper</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Advanced search</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Document scanning</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Personalization</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Calendar</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Tasks</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Integration</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-2 m-4">
+          <strong>RESOURCES</strong>
+          <ul class="list-unstyled ps-2">
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Evernote news</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Product Updates</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Help & learning</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Advanced search</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Template</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Forum</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Find an Expert</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Developers</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Contact us</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Careers</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">About Bending Spoons</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-2 m-4">
+          <strong>GET STARTED</strong>
+          <ul class="list-unstyled ps-2">
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Sign up for free</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none ">Log in</a></li>
+            <li class="px-1 my-4"><a href="#" class="text-dark text-decoration-none">Download</a></li>
+        </div>
+      </div>
+      <div class="footer-end d-flex align-items-center justify-content-between text-muted">
+        <div class="copyright">© 2025 Evernote Corporation. All rights reserved.</div>
+        <div class="footer-end-items d-flex justify-content-between">
+          <div class="footer-end-item m-3">Cookie Preferences</div>
+          <div class="footer-end-item m-3">Security</div>
+          <div class="footer-end-item m-3">Legal</div>
+          <div class="footer-end-item m-3">Privacy</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/reset';
+@import './base/colors';
+@import './base/fonts';
+
+@import './components/logo';
+@import './components/buttons';
+
+@import './layout/navbar';
+@import './layout/hero';
+@import './layout/cards';
+@import './layout/features';
+@import './layout/reviews';
+@import './layout/new';
+@import './layout/action';
+@import './layout/footer';
+
+.use-case{
+    .accordion-button , .accordion-body{
+        background-color: $primary-color;
+    }
+    
+    .accordion-button {
+      color: inherit;
+      box-shadow: none;
+    
+      &:hover{
+        background-color: $hover-color;
+      }
+    
+      &:not(.collapsed) {
+        background-color: $primary-color; 
+        color: inherit;                
+        box-shadow: none;           
+      }
+    }
+}
