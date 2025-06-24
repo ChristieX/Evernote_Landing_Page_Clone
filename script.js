@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  // casourel - reviews section
+  // casourel
   function updateActiveImage(index) {
     $(".casourel-buttons img").removeClass("active");
     $(".casourel-buttons img").eq(index).addClass("active");
@@ -27,14 +27,11 @@ $(document).ready(function () {
       $scrollContainer.animate({ scrollLeft: '+=' + scrollAmount }, 300);
     });
 
-    // accordion - use case section
+    // accordion
   $('.accordion-button').on('click', function () {
     const newImage = $(this).data('image');
     if (newImage) {
       $('#accordion-display-image').attr('src', newImage);
     }
   });
-
 });
-
-
