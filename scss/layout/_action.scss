@@ -2,11 +2,11 @@
     background-color: #005d13;
 
     .action-text{
-        color: white;
+        color: $hover-color;
     }
 
     button{
-        background-color: white;
+        background-color: $hover-color;
         @include button-shadow-hover();
     }
 }

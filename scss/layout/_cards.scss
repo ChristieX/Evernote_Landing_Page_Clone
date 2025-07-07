@@ -7,11 +7,11 @@
    overflow-x: auto;
     white-space: nowrap;
 
-    scrollbar-width: none; // Firefox
-  -ms-overflow-style: none; // IE 10+
+    scrollbar-width: none; 
+  -ms-overflow-style: none; 
   
   &::-webkit-scrollbar {
-    display: none; // Chrome, Safari
+    display: none; 
   }
   }
 
@@ -31,11 +31,11 @@
     border-radius: 50%;
     height: 5rem;
     width: 5rem;
-    color: black;
+    color: $tertiary-color;
     font-size: 2rem;
     text-align: center;
     line-height: 80px;
-    border: 2px solid black;
+    border: 2px solid $tertiary-color;
     cursor: pointer;
     z-index: 10;
 

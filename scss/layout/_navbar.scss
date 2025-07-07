@@ -1,5 +1,5 @@
 nav {
-  border-bottom: #000 1px solid;
+  border-bottom: $tertiary-color 1px solid;
 
   .navbar-nav {
     @media (max-width: 991.98px) {
@@ -25,7 +25,7 @@ nav {
   position: relative;
 
   .mega-dropdown {
-    border: 2px solid black;
+    border: 2px solid $tertiary-color;
     border-radius: 6px;
     position: absolute;
     left: 0;
@@ -40,7 +40,7 @@ nav {
 .dropdown-links {
   a {
     text-decoration: none;
-    color: #000;
+    color: $tertiary-color;
     line-height: 1;
   }
 
